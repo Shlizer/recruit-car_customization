@@ -1,0 +1,30 @@
+@import '~lato-font/css/lato-font.min.css';
+
+// --panel-bg: #0C2339;
+// --panel-border: #224461;
+// --panel-text: #5592BF;
+// --panel-text-muted: #2C5475;
+// --panel-header-text: #3C6C90;
+// --panel-header-line: #17334D;
+// --input-bg: #17334D;
+// --input-border: #2A5171;
+// --input-text: #325C7E;
+
+body {
+  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-size: 12px;
+  background-color: #0c2339;
+  color: #5592bf;
+  cursor: default;
+  user-select: none;
+}
+
+.mainContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #17334d;
+  box-shadow: 0 1em 6em rgba(0, 0, 0, 0.8);
+  padding: 2em;
+}

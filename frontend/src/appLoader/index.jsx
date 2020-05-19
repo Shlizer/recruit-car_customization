@@ -1,13 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import App from './App'
-import store from './store'
+import componentGetter from '../components/componentHoc'
+import store from '../store'
 import { AppContainer } from 'react-hot-loader'
 
-class AppLoader {
-  rootElement: HTMLElement | null
-  layout?: object
+export default class AppLoader {
+  layout = null
 
   constructor() {
     this.rootElement = document.getElementById('root')
@@ -19,7 +18,7 @@ class AppLoader {
       .then((result) => result.json())
       .catch((e) => {
         console.error("Layout wasn't fetched. Trying again.")
-        this.getLayout()
+        setTimeout(() => this.getLayout(), 2000)
       })
       .then((result) => {
         this.layout = result
@@ -29,6 +28,8 @@ class AppLoader {
 
   render() {
     if (this.rootElement && this.layout) {
+      const App = componentGetter(({ children }) => children)
+
       ReactDOM.render(
         <AppContainer>
           <Provider store={store}>
@@ -39,10 +40,4 @@ class AppLoader {
       )
     }
   }
-}
-
-const loader = new AppLoader()
-
-if (module.hot) {
-  module.hot.accept('./App', () => loader.render())
 }
