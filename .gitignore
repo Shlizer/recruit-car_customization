@@ -1,0 +1,5 @@
+# Workbranch config
+.idea
+
+# Dependencies
+node_modules

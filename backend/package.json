@@ -1,0 +1,30 @@
+{
+  "name": "car-customization-backend",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shlizer/car-customization/car-customization.git"
+  },
+  "author": {
+    "name": "Krzysiek 'Shlizer' Hinc",
+    "email": "hinc.krzysiek+github@gmail.com",
+    "url": "https://khinc.pl"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "printWidth": 200
+  }
+}
