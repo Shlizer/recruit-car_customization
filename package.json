@@ -7,7 +7,7 @@
     "install:backend": "yarn --cwd ./backend",
     "install:frontend": "yarn --cwd ./frontend",
     "postinstall": "yarn install:backend && yarn install:frontend",
-    "start:backend": "node backend/src/index.js",
+    "start:backend": "yarn --cwd ./backend start",
     "start:frontend": "yarn --cwd ./frontend start",
     "start": "concurrently \"yarn start:backend\" \"yarn start:frontend\""
   },

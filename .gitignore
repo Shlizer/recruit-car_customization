@@ -3,3 +3,8 @@
 
 # Dependencies
 node_modules
+yarn-error.log
+
+# Dist files
+dist
+*.d.ts
