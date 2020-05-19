@@ -1,12 +1,13 @@
 var express = require('express')
 var app = express()
 
-app.get('/hello', function (req, res) {
-  setTimeout(function () {
-    res.json({
-      message: 'Hello world!',
-    })
-  }, 3000)
+const endpoints = ['car', 'color', 'engine', 'gearbox', 'layout']
+
+endpoints.forEach((endpoint) => {
+  app.get(`/${endpoint}`, function (req, res) {
+    delete require.cache[require.resolve(`./db/${endpoint}`)]
+    res.json(require(`./db/${endpoint}`))
+  })
 })
 
 app.listen(4000, function () {

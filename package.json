@@ -23,7 +23,9 @@
   "devDependencies": {
     "concurrently": "5.2.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
   "prettier": {
     "trailingComma": "es5",
     "arrowParens": "avoid",
