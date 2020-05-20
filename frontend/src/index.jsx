@@ -1,4 +1,4 @@
-import AppLoader from './appLoader'
+import AppLoader from './components/AppLoader'
 import './reset.css'
 import './globals.scss'
 

@@ -4,7 +4,6 @@ import styles from './style.module.scss'
 
 class FlexBox extends React.Component {
   get classes() {
-    console.log(styles[this.props.direction])
     return [this.props.attributes.className || '', styles.flexBox, styles[this.props.direction]].join(' ')
   }
   render() {

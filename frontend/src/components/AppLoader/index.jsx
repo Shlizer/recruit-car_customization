@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import componentGetter from '../components/componentHoc'
-import store from '../store'
+import componentGetter from '../parts/componentHoc'
+import store from '../../store'
 import { AppContainer } from 'react-hot-loader'
 
 export default class AppLoader {

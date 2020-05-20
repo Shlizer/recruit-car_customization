@@ -3,10 +3,19 @@
   padding: 1em;
   margin-right: 0.3em;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
   transition: all 0.3s;
   cursor: pointer;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &.selected {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &.disabled {
+    opacity: 0.4;
   }
 }

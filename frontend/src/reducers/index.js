@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux'
 import fetched from './fetched'
 import selected from './selected'
-import fits from './fits'
 
 export const initialState = {
   fetched: {
@@ -17,15 +16,9 @@ export const initialState = {
     engine: null,
     gearbox: null,
   },
-  fits: {
-    color: { interior: [], exterior: [] },
-    engine: [],
-    gearbox: [],
-  },
 }
 
 export default combineReducers({
   fetched,
   selected,
-  fits,
 })
