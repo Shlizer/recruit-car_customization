@@ -1,8 +1,9 @@
 import React from 'react'
+import componentGetterHoc from '../componentGetterHoc'
 import Fetcher from '../../managers/fetch'
 import store from '../../store'
 import { setFetchedPartList } from '../../actions'
-import Part from '../Part'
+import PartType from '../PartType'
 
 class PartList extends React.Component {
   constructor(props) {
@@ -32,11 +33,13 @@ class PartList extends React.Component {
     return (
       <div {...(this.props.attributes || {})}>
         {this.state.partList.map((part) => (
-          <Part key={part.id} {...part} />
+          <PartType key={part.id} {...part} />
         ))}
       </div>
     )
   }
 }
 
+PartList.propTypes = componentGetterHoc.propTypes
+PartList.defaultProps = componentGetterHoc.defaultProps
 export default PartList

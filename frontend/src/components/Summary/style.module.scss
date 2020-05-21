@@ -5,6 +5,14 @@
   color: var(--part-title-color);
 }
 
+.carIcon {
+  fill: gray;
+  margin: 0 auto 2em;
+  display: block;
+  padding: 4em;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .partList {
   font-size: 1.2em;
 
@@ -44,6 +52,7 @@
     top: 3em;
     right: 1em;
     font-size: 0.7em;
+    background-color: var(--app-background);
     box-shadow: 0 0 1.4em rgba(0, 0, 0, 0.5);
     transition: all 0.3s;
 

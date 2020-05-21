@@ -15,4 +15,6 @@ class FlexBox extends React.Component {
   }
 }
 
+FlexBox.propTypes = componentGetterHoc.propTypes
+FlexBox.defaultProps = componentGetterHoc.defaultProps
 export default componentGetterHoc(FlexBox)
