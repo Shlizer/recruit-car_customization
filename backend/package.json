@@ -1,7 +1,7 @@
 {
   "name": "car-customization-backend",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Backend part for car customization program",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shlizer/car-customization/car-customization.git"

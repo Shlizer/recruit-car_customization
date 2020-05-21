@@ -1,43 +1,45 @@
 # Car customization
 
-* [Usage](#Usage)
-* [Project requirements](#project-requirements)
-* [How it's made](#how-its-made)
-  * [Front- and backend](#front--and-backend)
-  * [Layout creation](#layout-creation)
-  * [Part compatibility](#part-compatibility)
-  * [Price calculation](#price-calculation)
-  * [Possibilities](#possibilities)
-* [Author and license](#author-and-license)
+- [Usage](#Usage)
+- [Project requirements](#project-requirements)
+- [How it's made](#how-its-made)
+  - [Front- and backend](#front--and-backend)
+  - [Layout creation](#layout-creation)
+  - [Part compatibility](#part-compatibility)
+  - [Price calculation](#price-calculation)
+  - [Possibilities](#possibilities)
+- [Author and license](#author-and-license)
 
 ![screen](screen.png)
 
 ## Usage
 
 To start project simply clone it on your disc:
-```git clone https://github.com/Shlizer/car_customization.git```
+`git clone https://github.com/Shlizer/car_customization.git`
 
 Then go to project directory and install all dependencies using npm or yarn:
-```npm instal```
-```yarn```
+`npm instal`
+`yarn`
 
 At last to start project simply use
-```npm run start``` or
-```yarn start```
+`npm run start` or
+`yarn start`
 
 It's possible also to run both frontend and backend parts separately using prefixes like so:
-```npm run start:frontend``` or ```npm run start:backend```
-```yarn start:frontend``` or ```yarn start:backend```
+`npm run start:frontend` or `npm run start:backend`
+`yarn start:frontend` or `yarn start:backend`
+
+Important thing is to have port 4000 opened for backend app.
 
 ## Project requirements
 
-* [x] Project should use React and Redux
-* [x] Data should be provided asynchronously from external source
-* [x] Dynamic layout from given data
-* [x] Fetching car list and car parts
-* [x] Each car can have different compatibility with other parts
-* [x] Each gearbox have different compatibility with gearboxes
-* [x] Calculating price for all selected parts and presenting summary
+- [x] Project should use React and Redux
+- [x] Data should be provided asynchronously from external source
+- [x] Dynamic layout from given data
+- [x] Fetching car list and car parts
+- [x] Each car can have different compatibility with other parts
+- [x] Each gearbox have different compatibility with gearboxes
+- [x] Calculating price for all selected parts and presenting summary
 
 ## How it's made
 
@@ -59,7 +61,7 @@ Every part has it's own prop called 'price'. After selecting each element I'm ju
 
 ### Possibilities
 
-This project have some easy to upgrade parts such as all layout colors are stored in css variables so making basic color theming is easy. Also it's possible to add new part types - just add new entry in ```backend/src/db/parts.js``` and equivalent file with types in ```backend/src/db/parts/*```.
+This project have some easy to upgrade parts such as all layout colors are stored in css variables so making basic color theming is easy. Also it's possible to add new part types - just add new entry in `backend/src/db/parts.js` and equivalent file with types in `backend/src/db/parts/*`.
 
 ## Author and license
 

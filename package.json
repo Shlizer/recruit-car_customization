@@ -1,8 +1,7 @@
 {
   "name": "car-customization",
-  "description": "",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Car customization program",
+  "version": "1.0.0",
   "scripts": {
     "install:backend": "yarn --cwd ./backend",
     "install:frontend": "yarn --cwd ./frontend",
@@ -22,9 +21,6 @@
   },
   "devDependencies": {
     "concurrently": "5.2.0"
-  },
-  "dependencies": {
-    "node-sass": "^4.14.1"
   },
   "prettier": {
     "trailingComma": "es5",
