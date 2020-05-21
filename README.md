@@ -29,7 +29,7 @@ It's possible also to run both frontend and backend parts separately using prefi
 `npm run start:frontend` or `npm run start:backend`
 `yarn start:frontend` or `yarn start:backend`
 
-Important thing is to have port 4000 opened for backend app. If it's impossible please change it in `backend/src/index.js` express listening port and in proxy line in `frontend/package.json`.
+It's important to have port 4000 opened for backend app. If it's impossible please change it in `backend/src/index.js` express listening port and in proxy line in `frontend/package.json`.
 
 ## Project requirements
 
