@@ -1,9 +1,3 @@
-.title {
-  font-size: 1.2em;
-  padding: 1.2em 0 0.6em;
-  color: var(--part-title-color);
-}
-
 .choose {
   position: relative;
   display: inline-block;
@@ -26,6 +20,10 @@
 
   &.disabled {
     opacity: 0.4;
+
+    &:hover {
+      background-color: var(--part-element-background);
+    }
   }
 
   &:global(.round) {
@@ -35,9 +33,14 @@
     border-radius: 50%;
     margin-right: 0.8em;
     border: 3px solid transparent;
+    white-space: nowrap;
 
     &.selected {
       border: 3px solid var(--part-element-selected-color);
+    }
+
+    &.disabled {
+      transform: scale(0.5);
     }
 
     &:after {
@@ -49,10 +52,9 @@
       content: '';
       transition: all 0.3s;
       border-radius: 50%;
-      //background-color: rgba(0, 0, 0, 0);
     }
 
-    &:hover:after {
+    &:not(.disabled):hover:after {
       background-color: var(--part-element-round-hover-background);
     }
   }

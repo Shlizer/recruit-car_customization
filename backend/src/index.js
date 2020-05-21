@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 
-const endpoints = ['car', 'color', 'engine', 'gearbox', 'layout']
+const endpoints = ['car', 'color', 'engine', 'gearbox', 'layout', 'parts']
 
 endpoints.forEach((endpoint) => {
   app.get(`/${endpoint}`, function (req, res) {

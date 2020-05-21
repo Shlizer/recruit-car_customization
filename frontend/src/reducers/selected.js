@@ -8,7 +8,7 @@ export default (state = initialState.selected, action) => {
     case actions.SELECT_PART:
       if (payload.partId && payload.elementId) return { ...state, [payload.partId]: payload.elementId }
     case actions.DESELECT_PART:
-      if (payload.partId && payload.elementId) return { ...state, [payload.partId]: null }
+      if (payload.partId) return { ...state, [payload.partId]: null }
     default:
       return state
   }
