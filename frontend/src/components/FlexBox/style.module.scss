@@ -1,0 +1,29 @@
+.flexBox {
+  display: flex;
+  flex-grow: 1;
+  padding: 2em;
+  box-sizing: border-box;
+
+  &:global(.noPadding) {
+    padding: 0;
+  }
+
+  .columns {
+    flex-direction: row;
+  }
+
+  .rows {
+    flex-direction: column;
+  }
+
+  &:global(.mainFlex) {
+    box-sizing: border-box;
+    max-width: 60vw;
+  }
+
+  @media (max-width: 650px) {
+    &:global(.mainFlex) {
+      width: 100vw;
+    }
+  }
+}

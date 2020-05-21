@@ -1,5 +1,5 @@
 import React from 'react'
-import componentGetter from '../componentHoc'
+import componentGetterHoc from '../componentGetterHoc'
 import styles from './style.module.scss'
 
 class FlexBox extends React.Component {
@@ -15,4 +15,4 @@ class FlexBox extends React.Component {
   }
 }
 
-export default componentGetter(FlexBox)
+export default componentGetterHoc(FlexBox)

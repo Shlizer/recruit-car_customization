@@ -1,25 +1,19 @@
-const chooseComponents = [
-  { type: 'Car' },
-  { type: 'Engine' },
-  { type: 'Gearbox' },
-  { id: 'ColorInterior', type: 'Color', place: 'interior' },
-  { id: 'ColorExterior', type: 'Color', place: 'exterior' },
-]
-
 module.exports = {
   components: [
     {
       type: 'FlexBox',
-      attributes: { className: 'mainContainer' },
+      attributes: { className: 'mainFlex' },
       direction: 'columns',
       components: [
         {
           type: 'FlexBox',
+          attributes: { className: 'noPadding', style: { maxWidth: '55vw' } },
           direction: 'rows',
-          components: chooseComponents,
+          components: [{ type: 'PartList' }],
         },
         {
           type: 'Summary',
+          attributes: { style: { width: '25vw' } },
         },
       ],
     },

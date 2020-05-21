@@ -1,9 +1,6 @@
-import FlexBox from './FlexBox'
-import Summary from './Summary'
-import Car from './Car'
-import Color from './Color'
-import Engine from './Engine'
-import Gearbox from './Gearbox'
+import FlexBox from '../components/FlexBox'
+import Summary from '../components/Summary'
+import PartList from '../components/PartList'
 
 class ComponentManager {
   static components = {}
@@ -19,9 +16,6 @@ class ComponentManager {
 
 ComponentManager.register('FlexBox', FlexBox)
 ComponentManager.register('Summary', Summary)
-ComponentManager.register('Car', Car)
-ComponentManager.register('Color', Color)
-ComponentManager.register('Engine', Engine)
-ComponentManager.register('Gearbox', Gearbox)
+ComponentManager.register('PartList', PartList)
 
 export default ComponentManager

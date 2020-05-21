@@ -1,0 +1,44 @@
+.title {
+  padding: 1.2em 0 2em;
+  font-size: 1.5em;
+  text-align: right;
+  color: var(--part-title-color);
+}
+
+.partList {
+  font-size: 1.2em;
+
+  dt {
+    text-align: right;
+    margin-top: 0.2em;
+    padding-right: 0.5em;
+    font-weight: bold;
+  }
+
+  dt,
+  dd {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+
+.price {
+  position: relative;
+  margin-top: 2em;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--part-element-selected-color);
+
+  > b {
+    font-size: 0.9em;
+    margin-right: 0.3em;
+    color: var(--app-color);
+  }
+
+  .partList {
+    position: absolute;
+    top: 2em;
+  }
+}

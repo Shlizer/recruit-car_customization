@@ -1,7 +1,7 @@
 import React from 'react'
-import ComponentManager from './manager'
+import ComponentManager from '../managers/component'
 
-export default function componentGetter(CustomComponent) {
+export default function componentGetterHoc(CustomComponent) {
   return class ComponentGetter extends React.Component {
     state = { children: [] }
 

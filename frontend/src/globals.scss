@@ -13,10 +13,14 @@
 body {
   font-family: 'Lato', 'Open Sans', sans-serif;
   font-size: 12px;
-  background-color: #0c2339;
-  color: #5592bf;
+  background-color: var(--app-background);
+  color: var(--app-color);
   cursor: default;
   user-select: none;
+}
+
+b {
+  font-weight: bold;
 }
 
 .mainContainer {
@@ -24,7 +28,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: #17334d;
-  box-shadow: 0 1em 6em rgba(0, 0, 0, 0.8);
-  padding: 2em;
+  background-color: var(--box-background);
+  color: var(--box-color);
+  box-shadow: var(--box-shadow);
+  max-height: 90vh;
+  max-width: 830px;
+  overflow: auto;
+}
+
+@media (max-width: 650px) {
+  .mainContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    max-height: none;
+  }
 }

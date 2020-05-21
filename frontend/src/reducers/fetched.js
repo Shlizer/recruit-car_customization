@@ -5,14 +5,13 @@ export default (state = initialState.fetched, action) => {
   const { type, payload } = action
 
   switch (type) {
-    case actions.SET_FETCHED_CAR:
-      return { ...state, car: payload }
-    case actions.SET_FETCHED_COLOR:
-      return { ...state, color: payload }
-    case actions.SET_FETCHED_ENGINE:
-      return { ...state, engine: payload }
-    case actions.SET_FETCHED_GEARBOX:
-      return { ...state, gearbox: payload }
+    case actions.SET_FETCHED_LAYOUT:
+      return { ...state, layout: payload.layout }
+    case actions.SET_FETCHED_PART_LIST:
+      return { ...state, partList: payload.partList }
+    case actions.SET_FETCHED_PART:
+      if (payload.partType && Array.isArray(payload.list))
+        return { ...state, parts: { ...state.parts, [payload.partType]: payload.list } }
     default:
       return state
   }

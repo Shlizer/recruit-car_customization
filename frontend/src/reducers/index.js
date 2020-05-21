@@ -4,18 +4,11 @@ import selected from './selected'
 
 export const initialState = {
   fetched: {
-    car: [],
-    color: [],
-    engine: [],
-    gearbox: [],
     layout: [],
+    partList: [],
+    parts: {},
   },
-  selected: {
-    car: null,
-    color: { interior: null, exterior: null },
-    engine: null,
-    gearbox: null,
-  },
+  selected: {},
 }
 
 export default combineReducers({
