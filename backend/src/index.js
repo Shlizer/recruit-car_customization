@@ -1,13 +1,19 @@
 var express = require('express')
 var app = express()
 
-const endpoints = ['car', 'color', 'engine', 'gearbox', 'layout', 'parts']
+app.get(`/layout`, function (req, res) {
+  delete require.cache[require.resolve(`./db/layout`)]
+  res.json(require(`./db/layout`))
+})
 
-endpoints.forEach((endpoint) => {
-  app.get(`/${endpoint}`, function (req, res) {
-    delete require.cache[require.resolve(`./db/${endpoint}`)]
-    res.json(require(`./db/${endpoint}`))
-  })
+app.get(`/parts`, function (req, res) {
+  delete require.cache[require.resolve(`./db/parts`)]
+  res.json(require(`./db/parts`))
+})
+
+app.get(`/part/:partName`, function (req, res) {
+  delete require.cache[require.resolve(`./db/parts/${req.params.partName}`)]
+  res.json(require(`./db/parts/${req.params.partName}`))
 })
 
 app.listen(4000, function () {

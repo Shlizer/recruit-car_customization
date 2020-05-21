@@ -26,7 +26,7 @@ class PartType extends React.Component {
   }
 
   getData(retry = false) {
-    Fetcher.fetch('/' + this.props.type, retry)
+    Fetcher.fetch('/part/' + this.props.type, retry)
       .then((result) => store.dispatch(setFetchedPart(this.props.type, result)))
       .catch((e) => {
         console.error(`Parts of type ${this.props.type} weren't fetched. Trying again.`, e)
