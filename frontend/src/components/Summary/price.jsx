@@ -8,12 +8,9 @@ class Price extends React.Component {
     this.state = { price: 0, parts: { car: 0, engine: 0, gearbox: 0, colorInterior: 0, colorExterior: 0 } }
 
     store.subscribe(() => {
-      const newState = {
-        price: 0,
-        parts: this.getPrices(),
-      }
+      const newState = { price: 0, parts: this.getPrices() }
       Object.keys(newState.parts).forEach((partName) => (newState.price += newState.parts[partName]))
-      this.setState(newState)
+      if (JSON.stringify(newState) !== JSON.stringify(this.state)) this.setState(newState)
     })
   }
 
@@ -29,7 +26,7 @@ class Price extends React.Component {
         if (list.length && selected) {
           prices[id] = list.find((data) => data.id === selected)?.price || 0
         } else {
-          prices[IDBCursor] = 0
+          prices[id] = 0
         }
       })
     }
@@ -39,16 +36,20 @@ class Price extends React.Component {
 
   get priceList() {
     return (
-      <div className={styles.priceList}>
-        {Object.fromEntries(
-          Object.entries(this.state.parts).map(([name, price]) => (
-            <>
-              <span>{name}</span>
-              {price}
-            </>
-          ))
-        )}
-      </div>
+      <table className={styles.priceList}>
+        <tbody>
+          {Object.entries(this.state.parts).map(([partId, price]) => {
+            const partList = store.getState()?.fetched?.partList || []
+            const label = partList.find((partData) => partData.id === partId)?.label || partId
+            return (
+              <tr key={partId}>
+                <td>{label}: </td>
+                <td>${price.toFixed(2)}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     )
   }
 
